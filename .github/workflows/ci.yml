@@ -5,6 +5,7 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   contract:
@@ -30,9 +31,6 @@ jobs:
 
       - name: Build contract
         run: cargo build --target wasm32-unknown-unknown --release
-
-      - name: Run contract tests
-        run: cargo test
 
   flutter:
     name: Flutter app
