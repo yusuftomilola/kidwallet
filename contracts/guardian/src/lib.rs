@@ -2,6 +2,7 @@
 pub mod error;
 use soroban_sdk::{contract, contractimpl, Env};
 
+/// Enforces guardian-controlled spending policies for child wallet accounts on the Stellar network.
 #[contract]
 pub struct GuardianContract;
 
